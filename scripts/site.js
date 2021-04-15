@@ -339,9 +339,9 @@ function generateRickProfile(la) {
     var reviewText = "";
 
     if (age < 18) {
-        reviewText = "your application will not be reviewed, because you have to be 18 years or older.";
+        reviewText = "will not be reviewed, because you have to be 18 years or older.";
     } else {
-        reviewText = "your application will be reviewed.";
+        reviewText = "will be reviewed.";
     }
 
     var riskProfile = "";
@@ -357,7 +357,8 @@ function generateRickProfile(la) {
     }
 
     // var summaryText = "Dear " + la.ApplicantName + ", " + reviewText + " Your risk profile is " + riskProfile;
-    var summaryText = `Dear ${la.ApplicantName}, ${reviewText}  
+    var summaryText = `Dear ${la.ApplicantName}, 
+    your application for ${"$" + la.LoanAmount}, ${reviewText}.  
     Your risk profile is ${riskProfile}`;
     return summaryText;
 }
